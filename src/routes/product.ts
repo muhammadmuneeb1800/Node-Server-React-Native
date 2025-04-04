@@ -32,7 +32,7 @@ router.post(
       if (!userId) {
         return res.status(401).json({ error: "Unauthorized" });
       }
-      const { name, desc, image, price, ownerId, rating, category } = req.body;
+      const { name, desc, image, price, rating, category } = req.body;
       console.log("User DATA from", req.body);
       if (!name || !desc || !image || !price || !rating || !category) {
         return res.status(400).json({ error: "All fields are required" });
